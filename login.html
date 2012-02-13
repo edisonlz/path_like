@@ -1,0 +1,104 @@
+<!doctype html>
+<html> 
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Path</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="HandheldFriendly" content="true"/>  
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+
+<style>
+	body{
+		color: white;
+		background: url(images/cover_bg.png) repeat;
+	  	font-size: 28px;
+		font-weight:bold;
+	 	font-family: Harrington;
+	}
+	
+	
+	input.op-cover
+	{
+		height:40px;
+		background: url(images/cover_input_bg.png) repeat-x white;
+		border:1px solid;
+		font-size:16px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+
+	input.op-cover.button 
+	{
+		padding:3px;
+		padding-left:10px;
+		padding-right:10px;
+		background: url(images/header_bg.png)  repeat-x;
+		font-size:16px;
+
+		border:1px solid rgba( 0 , 0 , 0 , 0.3 );
+		color:white;
+		cursor:pointer;
+	}
+
+	input.op-cover.button:active
+	{ 
+		position: relative;
+		top: 10px;
+    	cursor: pointer;
+    	disabled:"disabled";
+	}
+
+	.round8
+	{
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+	}
+	
+	
+</style>
+
+ <script type="text/javascript">  
+ function index(){  
+ 	document.getElementById("loader").style.display ="";
+    setTimeout(goto,1600);
+}  
+
+function goto(){
+	window.location.href="index.html";  	
+}
+
+</script>  
+
+<body>
+
+<div id="container" >
+	<header>
+		<center>
+			<h1>Path</h1>
+		</center>
+	</header>
+	<div>
+	<center>
+		<form>
+			<p><input class="op-cover round8" name="email" value="path" id="email" type="text" /></p>
+			<p><input class="op-cover round8" name="password" value="path" id="password" type="password" /></p>
+			<p class="submit"><input type="submit" value="登录" class="op-cover round8 button" id="login_button" onclick="javascript:index();return false;"></p>
+		</form>
+		<div id="loader" style="display:none">
+		<img src="images/ajax-loader.gif"/>
+		</div>
+		</center>
+	</div>
+	<footer>
+
+	</footer>
+</div> <!--! end of #container -->
+
+
+</body>
+</html>
